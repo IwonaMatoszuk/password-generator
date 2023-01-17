@@ -1,79 +1,56 @@
-# Module 5 Challenge: Password Generator
+# Password Generator
 
-## Overview
+## Deployed link: https://iwonamatoszuk.github.io/password-generator/
 
-This week’s challenge requires you to create an application that an employee can use to generate a random password based on criteria they’ve selected by modifying starter code. This app will run in the browser, and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean and polished user interface that is responsive, ensuring that it adapts to multiple screen sizes.
+## Description
 
-The password can include special characters. If you’re unfamiliar with these, see this [list of Password Special Characters from the OWASP Foundation](https://www.owasp.org/index.php/Password_special_characters).
+Application to generate a random passwords based on selected criteria.
+This app will run in the browser, and will feature dynamically updated HTML and CSS powered by JavaScript code. It has polished user interface that is responsive, ensuring that it adapts to multiple screen sizes.
 
-## Instructions
+## Instruction
 
-The following image shows the web application's appearance and functionality:
-
-![password generator demo](./assets/05-javascript-challenge-demo.png)
-
-
-* Generate a password when the button is clicked
-  * Present a series of prompts for password criteria
-    * Length of password
+Click the button to generate a password
+* Choose following password's criteria:
+  * Length of password:
       * At least 10 characters but no more than 64.
-    * Character types
+  * Character types:
       * Lowercase
       * Uppercase
       * Numeric
       * Special characters ($@%&*, etc)
-  * Code should validate for each input and at least one character type should be selected
-  * Once prompts are answered then the password should be generated and displayed in an alert or written to the page
 
-## Grading Requirements
+## Mock up
 
-This challenge is graded based on the following criteria: 
+The following image shows the web application's appearance and functionality:
 
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the above acceptance criteria plus the following:
-
-  * The challenge should not produce any errors in the console when you inspect it using Chrome DevTools.
-
-### Deployment: 32%
-
-* Application deployed at live URL.
-
-* Application loads with no errors.
-
-* Application GitHub URL submitted.
-
-* GitHub repository that contains application code.
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application resembles the mock-up functionality provided in the challenge instructions.
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality README file with description, screenshot, and link to deployed application.
+![screenshot.png](./assets/images/screenshot.png)
 
 
-## Review
+## MiT Licence
 
-You are required to submit the following for review:
+MIT License
 
-* The URL of the deployed application.
+Copyright (c) 2023 Iwona Matoszuk
 
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
----
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+
+
+
