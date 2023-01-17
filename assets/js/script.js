@@ -88,13 +88,14 @@ var upperCasedCharacters = [
 // Function to prompt user for password options
 function getPasswordOptions() {
 
-console.log("here")
+
   // variable to store length of password from user input
   let passwordLength = parseInt(
     prompt ("Please enter the number of characters for your new password (from 10 to 64)"
     )
   )
-
+  
+  //Password length must be between 10 and 64 characters
   if (passwordLength < 10 || passwordLength > 64) {
     alert("Password length must be between 10 and 64 characters. Try again!");
     return;
@@ -152,7 +153,6 @@ function generatePassword() {
   let options = getPasswordOptions();
   console.log(options)
 
-
   let result = [];
 
   let possibleCharacter = [];
@@ -161,41 +161,55 @@ function generatePassword() {
   let guaranteedCharacter = [];
 
   if(options.lowercase) {
-    //Use concat to add two arrays together
+    //Use concat to add arrays together;  store collected values in  possibleCharacter array
     possibleCharacter = possibleCharacter.concat(lowerCasedCharacters);
+    //Use to get random value from array (here: lowerCaseCharacters) and add it to the end of array (here: guaranteedCharacter) 
     guaranteedCharacter.push(getRandom(lowerCasedCharacters))
   }
 
   if(options.uppercase) {
-    //Use concat to add two arrays together
+    
     possibleCharacter = possibleCharacter.concat(upperCasedCharacters);
     guaranteedCharacter.push(getRandom(upperCasedCharacters))
   }
 
   if(options.number) {
-    //Use concat to add two arrays together
+    
     possibleCharacter = possibleCharacter.concat(numericCharacters);
     guaranteedCharacter.push(getRandom(numericCharacters))
   }
 
   if(options.symbol) {
-    //Use concat to add two arrays together
+    
     possibleCharacter = possibleCharacter.concat(specialCharacters);
     guaranteedCharacter.push(getRandom(specialCharacters))
   }
+
+  //Verification
   console.log(possibleCharacter);
   console.log(guaranteedCharacter);
 
+  //Get (number of password length) random values from all values stored in possibleCharacter array 
   for(index = 0; index < options.passwordLength; index++){
     var generated = getRandom(possibleCharacter);
     result.push(generated);
+    console.log(generated)
   }
   
+  //To make sure all required characters are included in password, replace value of result with same index value of 
+  //guaranteedCharacter
   for(index = 0; index < guaranteedCharacter.length; index++){
     result[index] = guaranteedCharacter[index];
   }
   
-  // Returns result onscreen
+  //Shuffle all values in result array
+  
+  function shuffleArray(result) {
+    result.sort(() => Math.random() - 0.5);
+  }
+  shuffleArray(result)
+  console.log(result);
+  
   return result.join("");
   
 }
